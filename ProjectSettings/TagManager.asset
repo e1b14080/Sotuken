@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Box
   - Target
+  - OutsideCollider
+  - InsideCollider
   layers:
   - Default
   - TransparentFX
