@@ -12,13 +12,17 @@ using UnityEngine;
 public class StrikeVibration : MonoBehaviour {
 
     //接触音
-    AudioSource _strikeSound;
-
+    private AudioSource _strikeSound;
+    //オーディオソースの番号
+    [SerializeField]
+    private int _sourceNumber = 0;
     // Use this for initialization
     void Start()
     {
-        //音の初期化
-        _strikeSound = GetComponent<AudioSource>();
+        //複数のオーディオソースを読み込む
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        //使用するオーディオソースの設定
+        _strikeSound = audioSources[_sourceNumber];
     }
 
     void OnTriggerEnter(Collider other)
