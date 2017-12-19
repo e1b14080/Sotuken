@@ -5689,7 +5689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio01: {fileID: 0}
-  audioSource01: {fileID: 0}
+  audioSource01: {fileID: 1268431441}
   cam: {fileID: 0}
 --- !u!114 &1059829833
 MonoBehaviour:
@@ -6161,7 +6161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1268431441
 AudioSource:
   m_ObjectHideFlags: 0
