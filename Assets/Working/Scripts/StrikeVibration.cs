@@ -28,7 +28,7 @@ public class StrikeVibration : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //透明なオブジェクトに接触した瞬間に音を鳴らす。
-        if (other.gameObject.tag == "OutsideCollider")
+        if (other.gameObject.tag == "InvisibleObject")
         {
             _strikeSound.Play();
             Debug.Log("Strike");
