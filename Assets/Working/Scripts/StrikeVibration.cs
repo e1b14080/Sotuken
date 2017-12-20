@@ -13,16 +13,22 @@ public class StrikeVibration : MonoBehaviour {
 
     //接触音
     private AudioSource _strikeSound;
+    //接触振動
+    private AudioSource _strikeVibration;
     //オーディオソースの番号
     [SerializeField]
-    private int _sourceNumber = 0;
+    private int _soundSourceNumber = 0;
+    //オーディオソースの番号
+    [SerializeField]
+    private int _vibSourceNumber = 2;
+
     // Use this for initialization
     void Start()
     {
         //複数のオーディオソースを読み込む
         AudioSource[] audioSources = GetComponents<AudioSource>();
         //使用するオーディオソースの設定
-        _strikeSound = audioSources[_sourceNumber];
+        _strikeSound = audioSources[_soundSourceNumber];
     }
 
     void OnTriggerEnter(Collider other)

@@ -10,26 +10,45 @@ public class IntoVibration : MonoBehaviour {
     [SerializeField]
     private int _sourceNumber = 0;
 
-    private Rigidbody _rigid;
-    //移動しているかを認める速度の定数
-    const float MOVING_SPEED_LIMIT = 0.1f;
-
-
+    //最新の自身の位置
+    Vector3 _latestPosition;
+    //自身の位置が変化しているか
+    bool _isMoving = false;
 
     // Use this for initialization
     void Start () {
-        _rigid = GetComponent<Rigidbody>();
         //複数のオーディオソースを読み込む
         AudioSource[] audioSources = GetComponents<AudioSource>();
         //使用するオーディオソースの設定
         _intoSound = audioSources[_sourceNumber];
+
+        //最新の位置の初期化
+        _latestPosition = transform.position;
     }
 	
+    void FixedUpdate()
+    {
+        //透明な立体物の中を移動しているか
+        if (_latestPosition != transform.position)
+        {
+            //移動している場合
+            _isMoving = true;
+            _latestPosition = transform.position;   //最新の位置の更新
+            Debug.Log("Player's hand is Moving");
+        }
+        else
+        {
+            //移動していない場合
+            _isMoving = false;
+            Debug.Log("Player's hand isn't Moving");
+        }
+    }
+
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("speed:"+_rigid.velocity.magnitude);
+
         //オブジェクトの移動判断
-        if (_rigid.velocity.magnitude >= MOVING_SPEED_LIMIT)
+        if (_isMoving)
         {
             Debug.Log("Move");
             //移動している場合
