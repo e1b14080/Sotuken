@@ -12,11 +12,11 @@ public class ScaleSlider : MonoBehaviour {
 	void Start () {
 		slider = GetComponent<Slider>();
 		slider.value = 1;
-		hand = GameObject.Find("Hand");
+		hand = GameObject.FindWithTag("Hand");
 	}
 
 	void Update (){
-		hand.transform.localScale = new Vector3 (1, slider.value, 1);
+		hand.transform.localScale = new Vector3 (slider.value, slider.value, slider.value);
 
 	}
 }

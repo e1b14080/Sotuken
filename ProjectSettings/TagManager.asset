@@ -8,7 +8,7 @@ TagManager:
   - Target
   - OutsideCollider
   - InsideCollider
-  - InvisibleObject
+  - Hand
   layers:
   - Default
   - TransparentFX

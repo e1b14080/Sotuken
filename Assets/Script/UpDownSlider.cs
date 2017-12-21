@@ -7,15 +7,17 @@ public class UpDownSlider : MonoBehaviour {
 	private Slider slider;
 	private float level;
 	GameObject hand;
+	float pos;
 
 	void Start () {
 		slider = GetComponent<Slider>();
+		hand = GameObject.FindWithTag("Hand");
 		slider.value = 0;
-		hand = GameObject.Find("Hand");
+		pos = hand.transform.localPosition.y;
 	}
 
 	void Update (){
-		hand.transform.position = new Vector3 (0, slider.value, 0);
+		hand.transform.position = new Vector3 (hand.transform.position.x,pos + slider.value, hand.transform.position.z);
 
 		}
 }
