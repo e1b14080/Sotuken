@@ -28,7 +28,7 @@ public class IntoVibration : MonoBehaviour {
 	
     void FixedUpdate()
     {
-        //透明な立体物の中を移動しているか
+        //移動しているか
         if (_latestPosition != transform.position)
         {
             //移動している場合
@@ -53,7 +53,7 @@ public class IntoVibration : MonoBehaviour {
             Debug.Log("Move");
             //移動している場合
             
-            if(other.gameObject.tag == "InvisibleObject")
+            if(other.gameObject.tag == "InsideCollider")
             {
                 //めり込み音が再生されていない場合
                 if(!_intoSound.isPlaying)
