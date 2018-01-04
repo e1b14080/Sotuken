@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 218109707}
   m_Layer: 0
   m_Name: VibrationEffect
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -585,6 +585,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0220b89d6d10c724b8355b5ff98ca4cd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1401782331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1401782332}
+  - component: {fileID: 1401782333}
+  m_Layer: 0
+  m_Name: ColliderStateManager
+  m_TagString: Hand
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1401782332
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401782331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1401782333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401782331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3f92a5bb43fe741b440fcd434e02b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _touchesOutsideCollider: 0
+  _touchesInsideCollider: 0
+--- !u!1 &1564483026 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1072602553651982, guid: 0220b89d6d10c724b8355b5ff98ca4cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1179486155}
+--- !u!114 &1564483029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564483026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfc1b9efe0fe459dc101fe7143f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchesCollider: 0
+  ColliderStateManager: {fileID: 1401782331}
+--- !u!1 &1603686141 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1119298910022268, guid: 0220b89d6d10c724b8355b5ff98ca4cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1179486155}
+--- !u!114 &1603686144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603686141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfc1b9efe0fe459dc101fe7143f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchesCollider: 1
+  ColliderStateManager: {fileID: 1401782331}
 --- !u!1 &1687239838
 GameObject:
   m_ObjectHideFlags: 0
