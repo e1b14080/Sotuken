@@ -52,7 +52,7 @@ public class StrikeVibration : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-
+        //ToDo::相手側でコライダーのステータスを返す処理に変更する。
         if (other.gameObject.tag    != "InsideCollider" 
          && other.gameObject.tag == "OutsideCollider")
         {
@@ -65,10 +65,7 @@ public class StrikeVibration : MonoBehaviour {
             }
 
         }
-        else if (other.gameObject.tag == "InsideCollider")
-        {
-            _strikeSound.Stop();
-        }
+
 
     }
 

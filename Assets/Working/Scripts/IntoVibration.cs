@@ -47,37 +47,36 @@ public class IntoVibration : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
 
-        //オブジェクトの移動判断
-        if (_isMoving)
+        if(other.gameObject.tag == "InsideCollider")
         {
-            Debug.Log("Move");
-            //移動している場合
-            
-            if(other.gameObject.tag == "InsideCollider")
+
+            if(_isMoving)
             {
+                //移動している場合
+
                 //めり込み音が再生されていない場合
-                if(!_intoSound.isPlaying)
+                if (!_intoSound.isPlaying)
                 {
                     _intoSound.Play();
                 }
 
             }else
             {
+                //移動していない場合
                 _intoSound.Pause();
             }
 
-        }else
-        {
-            Debug.Log("Stop");
-            //移動していない場合
-            _intoSound.Pause();
         }
+
 
     }
 
     void OnTriggerExit(Collider other)
     {
-        _intoSound.Pause();
+        if (other.gameObject.tag == "InsideCollider")
+        {
+            _intoSound.Pause();
+        }
     }
 
 }
