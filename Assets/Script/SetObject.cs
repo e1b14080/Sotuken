@@ -33,7 +33,7 @@ public class SetObject : MonoBehaviour {
 			//pos.y = +0.1f;
 
 			Vector3 scale = Question_Object.transform.localScale;
-			pos.y +=(scale.y / 2);
+			//pos.y +=(scale.y / 2);
 
 
 			Instantiate (Question_Object, pos, rotation);
