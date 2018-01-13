@@ -5,7 +5,7 @@ using UnityEngine;
 public class SetObject : MonoBehaviour {
 
 	GameObject target;
-	public GameObject testbox;
+	public GameObject Question_Object;
 	private bool on_box = false;
 
 
@@ -32,11 +32,11 @@ public class SetObject : MonoBehaviour {
 			Quaternion rotation = target.transform.rotation;
 			//pos.y = +0.1f;
 
-			Vector3 scale = testbox.transform.localScale;
-			pos.y +=(scale.y / 2);
+			Vector3 scale = Question_Object.transform.localScale;
+			//pos.y +=(scale.y / 2);
 
 
-			Instantiate (testbox, pos, rotation);
+			Instantiate (Question_Object, pos, rotation);
 		}
 	}
 
