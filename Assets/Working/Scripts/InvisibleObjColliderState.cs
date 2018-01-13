@@ -13,6 +13,10 @@ public class InvisibleObjColliderState : MonoBehaviour {
     private bool _touchesOutsideCollider;
     [SerializeField]
     private bool _touchesInsideCollider;
+    [SerializeField]
+    private bool _touchesInsideColliderStay;
+    [SerializeField]
+    private int _intoColliderCount;
 
     public bool TouchesOutsideCollider
     {
@@ -35,6 +39,31 @@ public class InvisibleObjColliderState : MonoBehaviour {
         set
         {
             _touchesInsideCollider = value;
+        }
+    }
+
+    public bool TouchesInsideColliderStay
+    {
+        get
+        {
+            return _touchesInsideColliderStay;
+        }
+        set
+        {
+            _touchesInsideColliderStay = value;
+        }
+
+    }
+
+    public int IntoColliderCount
+    {
+        get
+        {
+            return _intoColliderCount;
+        }
+        set
+        {
+            _intoColliderCount = value;
         }
     }
 

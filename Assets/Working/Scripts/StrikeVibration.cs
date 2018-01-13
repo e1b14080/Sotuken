@@ -23,6 +23,9 @@ public class StrikeVibration : MonoBehaviour {
     [SerializeField]
     private int _vibSourceNumber = 2;
 
+    //コライダーの接触状態を記憶しているコンポーネント
+    InvisibleObjColliderState _myColliderState;
+
     //最後に接触振動音を鳴らした位置
     Vector3 _latestSoundPlayPosition;
     //鳴らす距離
@@ -37,24 +40,27 @@ public class StrikeVibration : MonoBehaviour {
         //使用するオーディオソースの設定
         _strikeSound = audioSources[_soundSourceNumber];
 
+        GameObject myColliderStateObj = GameObject.Find("ColliderStateManager");
+        _myColliderState = myColliderStateObj.GetComponent<InvisibleObjColliderState>();
+
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        //透明なオブジェクトに接触した瞬間に音を鳴らす。
-        if (other.gameObject.tag == "OutsideCollider")
-        {
-            _strikeSound.Play();
-            Debug.Log("Strike");
-            _latestSoundPlayPosition = transform.position;
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    //透明なオブジェクトに接触した瞬間に音を鳴らす。
+    //    if (other.gameObject.tag == "OutsideCollider"
+    //        && _myColliderState.TouchesOutsideCollider == false)
+    //    {
+    //        _strikeSound.Play();
+    //        Debug.Log("Strike");
+    //        _latestSoundPlayPosition = transform.position;
+    //    }
+    //}
 
-    void OnTriggerStay(Collider other)
+    void FixedUpdate()
     {
-        //ToDo::相手側でコライダーのステータスを返す処理に変更する。
-        if (other.gameObject.tag    != "InsideCollider" 
-         && other.gameObject.tag == "OutsideCollider")
+        if(_myColliderState.TouchesOutsideCollider == true
+            && _myColliderState.TouchesInsideCollider == false)
         {
             if (Vector3.Distance(_latestSoundPlayPosition, transform.position) >= _soundPlayDistance)
             {
@@ -63,21 +69,13 @@ public class StrikeVibration : MonoBehaviour {
                 _latestSoundPlayPosition = transform.position;
 
             }
-
         }
-
-
     }
 
-    void OnTriggerExit(Collider other)
+    public void PlayStrikeVibration()
     {
-        if(other.gameObject.tag == "InsideCollider")
-        {
-            _strikeSound.Play();
-            Debug.Log("Exit");
-            _latestSoundPlayPosition = transform.position;
-        }
-
+        _strikeSound.Play();
+        _latestSoundPlayPosition = transform.position;
     }
 
 }

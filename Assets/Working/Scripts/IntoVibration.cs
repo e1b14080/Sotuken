@@ -34,13 +34,11 @@ public class IntoVibration : MonoBehaviour {
             //移動している場合
             _isMoving = true;
             _latestPosition = transform.position;   //最新の位置の更新
-            Debug.Log("Player's hand is Moving");
         }
         else
         {
             //移動していない場合
             _isMoving = false;
-            Debug.Log("Player's hand isn't Moving");
         }
     }
 
