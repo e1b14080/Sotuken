@@ -63,7 +63,7 @@ public class OutsideVibration : MonoBehaviour {
 
     }
 
-    void OnTriggerExit()
+    void OnTriggerExit(Collider other)
     {
         _rubSound.Pause();
         Debug.Log("RubSound Pause");
