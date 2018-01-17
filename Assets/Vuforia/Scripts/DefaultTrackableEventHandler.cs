@@ -8,8 +8,6 @@ All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
-using UnityEngine;
-
 namespace Vuforia
 {
     /// <summary>
@@ -25,6 +23,7 @@ namespace Vuforia
         #endregion // PRIVATE_MEMBER_VARIABLES
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
+
     
         void Start()
         {
@@ -33,6 +32,9 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
+				
+
+
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -52,6 +54,7 @@ namespace Vuforia
 		public AudioSource audioSource01;
 
 		public GameObject cam;
+
 
 
         public void OnTrackableStateChanged(
@@ -98,6 +101,7 @@ namespace Vuforia
                 component.enabled = true;
             }
 
+
 			audioSource01.Stop();
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
@@ -119,7 +123,6 @@ namespace Vuforia
             {
                 component.enabled = false;
             }
-
 
 
 			//cam = GameObject.Find("ARCamera");

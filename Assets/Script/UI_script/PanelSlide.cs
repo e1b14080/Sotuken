@@ -13,14 +13,14 @@ public class PanelSlide : MonoBehaviour {
 	//解答パネルの表示
 	public void PanelOn () {
 		answerPanel = GameObject.Find ("AnswerPanel");
-			answerPanel.transform.localPosition = new Vector3 (-680, 0, 0);
+			answerPanel.transform.localPosition = new Vector3 (-440, 0, 0);
 
 	}
 
 	//解答パネルの非表示
 	public void PanelOff () {
 		answerPanel = GameObject.Find ("AnswerPanel");
-		answerPanel.transform.localPosition = new Vector3 (-1240, 0, 0);
+		answerPanel.transform.localPosition = new Vector3 (-840, 0, 0);
 
 	}
 }
