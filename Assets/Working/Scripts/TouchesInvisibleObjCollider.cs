@@ -9,16 +9,8 @@ public class TouchesInvisibleObjCollider : MonoBehaviour {
     public TouchesCollider touchesCollider = TouchesCollider.OutsideCollider;
     private InvisibleObjColliderState _invisibleObjColliderState;
     private StrikeVibration _strikeVibration;
-    static private int _intoColliderCount = 0;
-
-    public int IntoColliderCount
-    {
-        get
-        {
-            Debug.Log("call");
-            return _intoColliderCount;
-        }
-    }
+    static private int _intoOutsideColliderCount = 0;
+    static private int _intoInsideColliderCount = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -32,13 +24,23 @@ public class TouchesInvisibleObjCollider : MonoBehaviour {
     {
         if(other.tag == "Hand")
         {
-            if(_intoColliderCount == 0)
+            if (touchesCollider == TouchesCollider.OutsideCollider)
+            {
+                _intoOutsideColliderCount++;
+                _invisibleObjColliderState.TouchesOutsideCollider = true;
+            }
+
+            if (touchesCollider == TouchesCollider.InsideCollider)
+            {
+                _intoInsideColliderCount++;
+                _invisibleObjColliderState.TouchesInsideCollider = true;
+            }
+
+            if (_intoOutsideColliderCount == 1)
             {
                 _strikeVibration.PlayStrikeVibration();
             }
 
-            _intoColliderCount++;
-            Debug.Log("intoCollider:" + _intoColliderCount);
         }
     }
 
@@ -65,24 +67,22 @@ public class TouchesInvisibleObjCollider : MonoBehaviour {
         {
             if (touchesCollider == TouchesCollider.OutsideCollider)
             {
+                _intoOutsideColliderCount--;
                 _invisibleObjColliderState.TouchesOutsideCollider = false;
             }
 
             if (touchesCollider == TouchesCollider.InsideCollider)
             {
+                _intoInsideColliderCount--;
                 _invisibleObjColliderState.TouchesInsideCollider = false;
             }
 
-            if (other.tag == "Hand")
+            //音を鳴らすスクリプト
+            if (_intoInsideColliderCount == 0)
             {
-                _intoColliderCount--;
-                //音を鳴らすスクリプト
-                if(_intoColliderCount == 1)
-                {
-                    _strikeVibration.PlayStrikeVibration();
-                }
-                Debug.Log("intoCollider:"+ _intoColliderCount);
+                _strikeVibration.PlayStrikeVibration();
             }
+
         }
     }
 
