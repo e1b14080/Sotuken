@@ -15,6 +15,7 @@ public class TouchesInvisibleObjCollider : MonoBehaviour {
     {
         get
         {
+            Debug.Log("call");
             return _intoColliderCount;
         }
     }
