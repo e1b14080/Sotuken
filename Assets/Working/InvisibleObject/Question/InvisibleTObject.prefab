@@ -104,11 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4552900798762120}
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleTObject.prefab
-  - component: {fileID: 114485222063396366}
-=======
   - component: {fileID: 114827265901411698}
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleTObject.prefab
   m_Layer: 0
   m_Name: InvisibleTObject
   m_TagString: Box
@@ -396,17 +392,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &114485222063396366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1738268065821380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e641a4f8e8ce1b4cbbceff417ab834b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114694707763931862
 MonoBehaviour:
   m_ObjectHideFlags: 1

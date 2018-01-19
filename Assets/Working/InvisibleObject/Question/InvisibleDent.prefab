@@ -121,11 +121,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4415621427321684}
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleDent.prefab
-  - component: {fileID: 114605541798898628}
-=======
   - component: {fileID: 114539572363348300}
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleDent.prefab
   m_Layer: 0
   m_Name: InvisibleDent
   m_TagString: Box
@@ -504,11 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchesCollider: 1
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleDent.prefab
---- !u!114 &114605541798898628
-=======
 --- !u!114 &114539572363348300
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleDent.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

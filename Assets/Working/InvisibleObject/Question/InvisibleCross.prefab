@@ -86,11 +86,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4320290353919768}
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleCross.prefab
-  - component: {fileID: 114791743275840430}
-=======
   - component: {fileID: 114683825511687914}
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleCross.prefab
   m_Layer: 0
   m_Name: InvisibleCross
   m_TagString: Box
@@ -420,11 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchesCollider: 1
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleCross.prefab
---- !u!114 &114791743275840430
-=======
 --- !u!114 &114683825511687914
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleCross.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

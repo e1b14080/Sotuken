@@ -123,11 +123,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4742584070969260}
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleLTObject.prefab
-  - component: {fileID: 114828740938908664}
-=======
   - component: {fileID: 114376679070768650}
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleLTObject.prefab
   m_Layer: 0
   m_Name: InvisibleLTObject
   m_TagString: Box
@@ -516,11 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchesCollider: 0
-<<<<<<< HEAD:Assets/Working/InvisibleObject/InvisibleLTObject.prefab
---- !u!114 &114828740938908664
-=======
 --- !u!114 &114376679070768650
->>>>>>> 956f4450170201421a5168d8b205c1873dc65111:Assets/Working/InvisibleObject/Question/InvisibleLTObject.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
