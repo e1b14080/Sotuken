@@ -22,7 +22,7 @@ public class debug : MonoBehaviour {
 	void FixedUpdate () {
 		if (button == 1) {
 			countTime += Time.deltaTime; //スタートしてからの秒数を格納
-			if (countTime >= 20) {
+			if (countTime >= 60) {
 				Time.timeScale = 0;
 			}
 		}
