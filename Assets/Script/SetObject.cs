@@ -30,7 +30,7 @@ public class SetObject : MonoBehaviour {
 		if (on_box == false) {
 			Vector3 pos = target.transform.position;
 			Quaternion rotation = target.transform.rotation;
-			//pos.y = +0.1f;
+			pos.y = +0f;
 
 			Vector3 scale = Question_Object.transform.localScale;
 			//pos.y +=(scale.y / 2);

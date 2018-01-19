@@ -20,6 +20,12 @@ public class Next : MonoBehaviour {
 	public void on_Next() {
 
 		_Question.answer_time = false;
+
+		GameObject[] boxes = GameObject.FindGameObjectsWithTag ("Box");
+
+		foreach (GameObject box in boxes) {
+			Destroy (box);
+		}
 		
 	}
 }

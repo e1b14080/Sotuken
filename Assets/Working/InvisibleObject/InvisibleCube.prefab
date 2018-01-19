@@ -53,9 +53,10 @@ GameObject:
   - component: {fileID: 4793096762595770}
   - component: {fileID: 33441078191782748}
   - component: {fileID: 23140734220511690}
+  - component: {fileID: 114527285791588786}
   m_Layer: 0
   m_Name: InvisibleCube
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,3 +165,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114527285791588786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772047378756226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e641a4f8e8ce1b4cbbceff417ab834b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
