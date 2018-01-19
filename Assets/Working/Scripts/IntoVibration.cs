@@ -10,10 +10,7 @@ public class IntoVibration : MonoBehaviour {
     [SerializeField]
     private int _sourceNumber = 0;
 
-    //最新の自身の位置
-    Vector3 _latestPosition;
-    //自身の位置が変化しているか
-    bool _isMoving = false;
+    private Rigidbody _rigidbody; 
 
     // Use this for initialization
     void Start () {
@@ -22,24 +19,8 @@ public class IntoVibration : MonoBehaviour {
         //使用するオーディオソースの設定
         _intoSound = audioSources[_sourceNumber];
 
-        //最新の位置の初期化
-        _latestPosition = transform.position;
-    }
-	
-    void FixedUpdate()
-    {
-        //移動しているか
-        if (_latestPosition != transform.position)
-        {
-            //移動している場合
-            _isMoving = true;
-            _latestPosition = transform.position;   //最新の位置の更新
-        }
-        else
-        {
-            //移動していない場合
-            _isMoving = false;
-        }
+        _rigidbody = GetComponent<Rigidbody>();
+
     }
 
     void OnTriggerStay(Collider other)
@@ -48,7 +29,7 @@ public class IntoVibration : MonoBehaviour {
         if(other.gameObject.tag == "InsideCollider")
         {
 
-            if(_isMoving)
+            if(!_rigidbody.IsSleeping())
             {
                 //移動している場合
 

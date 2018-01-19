@@ -19,9 +19,6 @@ public class StrikeVibration : MonoBehaviour {
     //オーディオソースの番号
     [SerializeField]
     private int _soundSourceNumber = 0;
-    //オーディオソースの番号
-    [SerializeField]
-    private int _vibSourceNumber = 2;
 
     //コライダーの接触状態を記憶しているコンポーネント
     InvisibleObjColliderState _myColliderState;
