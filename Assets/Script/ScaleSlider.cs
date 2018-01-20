@@ -9,6 +9,8 @@ public class ScaleSlider : MonoBehaviour {
 	private float level;
 	GameObject hand;
 
+
+	//Handtagを持つオブジェクトを、スライダーで拡大縮小させる。
 	void Start () {
 		slider = GetComponent<Slider>();
 		slider.value = 1;
