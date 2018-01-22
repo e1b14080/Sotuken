@@ -44,7 +44,7 @@ public class SetObject : MonoBehaviour {
 		GameObject[] boxes = GameObject.FindGameObjectsWithTag ("Box");
 		foreach (GameObject box in boxes) {
 			boxes [0].GetComponent<Transform> ().transform.position = new Vector3(100f,100f,100f);
-			Destroy (box);
+			Destroy (box,1f);
 		}
 	}
 }

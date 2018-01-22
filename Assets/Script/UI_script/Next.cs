@@ -24,7 +24,8 @@ public class Next : MonoBehaviour {
 		GameObject[] boxes = GameObject.FindGameObjectsWithTag ("Box");
 
 		foreach (GameObject box in boxes) {
-			Destroy (box);
+			boxes [0].GetComponent<Transform> ().transform.position = new Vector3(100f,100f,100f);
+			Destroy (box,1f);
 		}
 		
 	}
