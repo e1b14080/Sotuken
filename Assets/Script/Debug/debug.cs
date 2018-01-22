@@ -19,12 +19,12 @@ public class debug : MonoBehaviour {
 			button = 1;
 		}
 	}
-	void FixedUpdate () {
+/*	void FixedUpdate () {
 		if (button == 1) {
 			countTime += Time.deltaTime; //スタートしてからの秒数を格納
 			if (countTime >= 60) {
 				Time.timeScale = 0;
 			}
 		}
-	}
+	}*/
 }
