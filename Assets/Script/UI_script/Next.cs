@@ -41,6 +41,8 @@ public class Next : MonoBehaviour {
 
 	private IEnumerator Setobject(){
 		yield return new WaitForSeconds (1.2f);
-		_SetObject.Onclick1 ();
+
+		_SetObject.Q_Object =　Instantiate (_SetObject.Question_Object,new Vector3(100f,100f,100f), _SetObject.rotation) as GameObject;
+		_SetObject.Q_Object.transform.position = _SetObject.pos;
 	}
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SetObject : MonoBehaviour {
 
-	GameObject target;//平面マーカー
-	GameObject Q_Object;//問題用オブジェクトを1時格納
+	public GameObject target;//平面マーカー
+	public GameObject Q_Object;//問題用オブジェクトを1時格納
 	public GameObject Question_Object;//現在の問題用の透明オブジェクトを格納
 	private bool on_box = false;//シーン上にボックスtagのオブジェクトが存在するか
 
+	public Vector3 pos;
+	public Quaternion rotation;
 
 	// Use this for initialization
 	void Start () {
@@ -27,8 +29,8 @@ public class SetObject : MonoBehaviour {
 	public void Onclick1() {
 		
 		if (on_box == false) {
-			Vector3 pos = target.transform.position;
-			Quaternion rotation = target.transform.rotation;
+			pos = target.transform.position;
+			rotation = target.transform.rotation;
 			pos.y = +0f;
 
 			Vector3 scale = Question_Object.transform.localScale;
