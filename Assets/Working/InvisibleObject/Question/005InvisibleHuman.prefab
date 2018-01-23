@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4916329045816378}
+  - component: {fileID: 114072740329615656}
   - component: {fileID: 65308520037388540}
   - component: {fileID: 65023378570230346}
   m_Layer: 0
@@ -103,6 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4034853935342414}
+  - component: {fileID: 114766715244083972}
   - component: {fileID: 65928202211577936}
   - component: {fileID: 65560110510207218}
   m_Layer: 0
@@ -390,6 +392,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0.05, z: 0}
+--- !u!114 &114072740329615656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1032149909661338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfc1b9efe0fe459dc101fe7143f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchesCollider: 1
+--- !u!114 &114766715244083972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711451305838160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfc1b9efe0fe459dc101fe7143f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchesCollider: 0
 --- !u!114 &114891952309128650
 MonoBehaviour:
   m_ObjectHideFlags: 1
